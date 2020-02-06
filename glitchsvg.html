@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <svg width="500" height="500" style="border: 0px solid black;" background-color="pink">
+      <filter id="pixelate" x="0" y="0">
+          <feFlood x="300" y="500" height="400" width="250" />
+          <feComposite width="50" height="70" />
+          <feTile result="a" />
+          <feComposite in="SourceGraphic" in2="a" operator="in" />
+          <feMorphology operator="dilate" radius="80" />
+        </filter>
+        <animateTransform attributeName="transform"
+          type="translate"
+          from="120 20"
+          to="-350 20"
+          begin="0s"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <g transform="scale(0.5)">
+          <use
+            transform="translate(5, 0)"
+            href="#eins"
+            filter="url(#pixelate)"
+            fill="rgb(0, 74, 255)"
+           
+            
+          />
+          <g>
+      <text id="eins" x="150" y="500" font-size="100px" font-weight="bold" font-family="sans-serif">
+        SVG GLITCH 
+      </text>
+      
+      </svg>
+      
+      <svg width="790" height="1800" viewBox=" 700 1">
+        <defs>
+          <linearGradient id="grad" x1="100%" y1="0%" x2="86%" y2="100%"
+              gradientUnits="objectBoundingBox">
+            <stop offset="0%" style="stop-color:rgb(0, 255, 244); stop-opacity:1"></stop>
+            <stop offset="48%" style="stop-color:rgb(0, 74, 255); stop-opacity:1"></stop>
+            <stop offset="98%" style="stop-color:rgb(127, 46, 208); stop-opacity:1"></stop>
+          </linearGradient>
+          <filter id="filter">
+            <feFlood flood-color="black" result="black"/>
+            <feFlood flood-color="darkred" result="flood1"/>
+            <feFlood flood-color="darkgreen" result="flood2"/>
+            <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+            <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+            <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+            <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+            <feComposite in="flood1" in2="off1a" operator="in"  result="comp1"/>
+            <feComposite in="flood2" in2="off2a" operator="in" result="comp2"/>
+            <feMerge x="0" width="100%" result="merge1">
+              <feMergeNode in="black"/>
+              <feMergeNode in="comp1"/>
+              <feMergeNode in="off1b"/>
+              <animate attributeName="y" id="y" dur ="4s"
+                  values="151px; 151px; 44px; 153px; 44px; 3px; 3px; 73px; 58px; 153px; 153px;
+                      29px; 9ßpx; 58px; 151px; 58px; 102px; 15px; 44px; 151px; 148px"
+                  keyTimes="0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613;
+                      0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1"
+                  repeatCount="indefinite"/>
+              <animate attributeName="height" id="h" dur ="4s"
+                  values="15px; 0px; 15px; 44px; 73px; 0px; 15px; 0px; 0px; 0px; 15px; 73px;
+                      58px; 0px; 0px; 0px; 58px; 44px; 15px; 0px; 73px"
+                  keyTimes="0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613;
+                      0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1"
+                  repeatCount="indefinite"/>
+            </feMerge>
+            <feMerge x="0" width="100%" y="500px" height="700px" result="merge2">
+              <feMergeNode in="black"/>
+              <feMergeNode in="comp2"/>
+              <feMergeNode in="off2b"/>
+              <animate attributeName="y" id="y" dur ="2s"
+                  values="150px; 151px; 100px; 77px; 61px; 151px; 113px; 129px; 140px; 145px;
+                      97px; 73px; 140px; 96px; 128px; 61px; 19px; 145px; 145px; 151px;" 
+                  keyTimes="0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326;
+                      0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1"
+                  repeatCount="indefinite"/>
+              <animate attributeName="height" id="h" dur="9s"
+                  values="0px; 0px; 0px; 23px; 23px; 17px; 17px; 0px; 0px; 7px; 15px; 32px;
+                      78px; 32px; 16px; 24px; 15px"
+                  keyTimes="0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326;
+                      0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 1"
+                  repeatCount="indefinite"/>
+            </feMerge>
+            <feMerge>
+              <feMergeNode in="SourceGraphic"/>  
+              <feMergeNode in="merge1"/> 
+              <feMergeNode in="merge2"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <rect x="-90" y="-71" width="100" height="600" fill="#ffffff" stroke="none"/>
+        <path fill-rule="evenodd" fill="url(#grad)" d="M495.998 360.389l-.189-14.501-14.398-1.278c-15.413-1.396-43.8-7.219-54.301-16.9-16.281-15.011-35.688-36.199-35.688-51.893 0-1.014 0-2.546 4.15-5.186 4.985-3.174 12.589-5.584 19.297-7.71 5.217-1.654 10.144-3.217 14.394-5.236 9.236-4.39 18.498-15.978 17.471-28.807-1.215-15.166-14.424-27.046-30.072-27.046-4.021 0-8.068.76-12.027 2.259-8.027 3.041-13.743 4.41-17.705 4.962.747-9.319 1.791-20.12 3.211-30.67 5.111-37.948-5.281-73.509-29.264-101.042C335.498 48.208 297.376 32 256.283 32H256c-41.093 0-79.215 16.208-104.591 45.341-23.982 27.534-34.375 63.345-29.265 101.292 1.416 10.51 2.46 21.231 3.21 30.618-3.97-.559-9.686-1.998-17.703-5.034-3.965-1.502-8.017-2.295-12.043-2.295-15.641-.001-28.844 11.852-30.057 27.003-1.027 12.818 8.235 24.393 17.47 28.783 4.251 2.02 9.181 3.578 14.4 5.232 6.707 2.125 14.309 4.532 19.293 7.703 4.147 2.639 4.147 4.168 4.147 5.182 0 8.66-6.191 24.691-35.688 51.888-10.499 9.681-39.055 15.501-54.588 16.897l-14.572 1.311L16 360.603c0 1.679.312 10.546 6.485 20.319 5.246 8.306 16.073 19.283 37.863 24.407a1139.713 1139.713 0 0 0 15.208 3.454c2.306.512 4.555 1.01 6.454 1.453l.081.623c.9 7.004 1.611 12.535 4.392 17.75 2.453 4.6 8.574 12.316 22.015 12.316 2.478 0 5.249-.246 8.472-.751 1.672-.263 3.386-.554 5.2-.863 7.116-1.212 15.182-2.587 23.451-2.587 10.277 0 18.732 2.188 25.846 6.688 4.531 2.867 8.892 5.972 13.509 9.26C202.967 465.481 223.358 480 256 480c32.726 0 53.293-14.582 71.439-27.446 4.576-3.244 8.898-6.309 13.377-9.142 7.113-4.5 15.568-6.688 25.846-6.688 8.27 0 16.334 1.375 23.449 2.586 1.814.311 3.529.602 5.202.864 3.223.505 5.993.751 8.472.751 13.44 0 19.562-7.715 22.015-12.313 2.781-5.214 3.492-10.746 4.392-17.749l.082-.629c1.898-.441 4.148-.941 6.455-1.452 4.023-.892 9.029-2.001 15.206-3.454 21.851-5.139 32.611-16.17 37.79-24.518 6.097-9.828 6.296-18.736 6.273-20.421zM208 128c8.836 0 16 10.745 16 24s-7.164 24-16 24-16-10.745-16-24 7.164-24 16-24zm103.615 77.698C296.368 220.725 276.617 229 256 229c-20.838 0-40.604-8.29-55.657-23.343a8 8 0 1 1 11.313-11.313C223.688 206.374 239.436 213 256 213c16.387 0 32.15-6.64 44.385-18.698a8 8 0 0 1 11.23 11.396zM304 176c-8.836 0-16-10.746-16-24s7.164-24 16-24 16 10.746 16 24-7.164 24-16 24z"
+            filter="url(#filter)"/>
+      </svg>
+  </body>
+</html>
