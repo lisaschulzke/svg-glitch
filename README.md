@@ -9,12 +9,9 @@ Zunächst suchte ich im Internet nach geeigneten SVGs. Diese fand ich letztendli
 
 Für die zwei Fahrräder benutzte ich ein gemeinsames `svg`Tag, in welchem beide Fahrräder enthalten sind. Für den Text benutzte ich ein neues `svg`tag in der gleichen Datei. So konnte ich die Richtung der Animation leichter für die jeweiligen Komponenten steuern. Hierfür benutzte ich das tag `animate transform`. Hierbei sind die Attribute `from`, `to`, `begin`, `dur` und `repeatCount`.
 
-`from`: Gibt den Startpunkt der Animation an
-
-`to`: Gibt den Endunkt der Animation an
-
-`begin`: Gibt an, nach wie vielen Sekunden die Animation starten soll
-
-`dur`: Gibt an, wie lange die Animation dauern soll
+* `from`: Gibt den Startpunkt der Animation an
+* `to`: Gibt den Endunkt der Animation an
+* `begin`: Gibt an, nach wie vielen Sekunden die Animation starten soll
+* `dur`: Gibt an, wie lange die Animation dauern soll
 
 Mit dem tag `filter`können außerdem auch Filter in die SVGs integriert werden. Dies habe ich ebenfalls getan, was in einer Verpixelung sichtbar wird. Dieser Filter wurde von CodePen.io übernommen.
