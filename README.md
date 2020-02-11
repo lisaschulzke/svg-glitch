@@ -13,5 +13,6 @@ Für die zwei Fahrräder benutzte ich ein gemeinsames `svg`Tag, in welchem beide
 * `to`: Gibt den Endunkt der Animation an
 * `begin`: Gibt an, nach wie vielen Sekunden die Animation starten soll
 * `dur`: Gibt an, wie lange die Animation dauern soll
+* `repeatCount`: Gibt an, wie oft sich die Animation wiederholen soll.
 
 Mit dem tag `filter`können außerdem auch Filter in die SVGs integriert werden. Dies habe ich ebenfalls getan, was in einer Verpixelung sichtbar wird. Dieser Filter wurde von CodePen.io übernommen.
