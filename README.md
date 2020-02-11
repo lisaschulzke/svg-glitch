@@ -26,3 +26,5 @@ Auf der Suche nach dem passenden Icon bin ich erneut auf https://ionicons.com/ g
 Für den Text benutze ich wieder den `animateTransform`, sowie auch den `filter`tag. Dadurch animierte ich den text und lies ihn verpixelter aussehen.
 
 Für den Geist nutzte ich wieder ein separates `SVG`tag. Ich bin der Meinung, dass ich somit besser auf die einzelnen Komponenten zugreifen kann.
+
+Mit dem tag `linearGradient` erzeugte ich den Farbverlauf in dem Geist und färbte ihn in den Farben meiner Wahl. Mit `feFlood` generierte ich den klassischen Glitch-Effekt mit dem rot-grünen Rand. Darum wählte ich die Farben schwarz, grün und rot.
