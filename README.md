@@ -1,6 +1,6 @@
 # SVG Glitch
 
-#### Aufgabe:
+### Aufgabe:
 Experimentieren mit SVG-Code, um die Art und Weise herauszufinden, wie SVG aufgebaut ist und welche Tags für die Darstellung nötig sind. Außerdem sollte durch verschiedene Attribute herausgefunden werden, wie sich SVGs glitchen lassen.
 
 ### Workshop
@@ -16,3 +16,9 @@ Für die zwei Fahrräder benutzte ich ein gemeinsames `svg`Tag, in welchem beide
 * `repeatCount`: Gibt an, wie oft sich die Animation wiederholen soll.
 
 Mit dem tag `filter`können außerdem auch Filter in die SVGs integriert werden. Dies habe ich ebenfalls getan, was in einer Verpixelung sichtbar wird. Dieser Filter wurde von CodePen.io übernommen.
+
+
+### Endprojekt
+
+Im Hinblick auf mein Endsemesterprojekt wollte ich etwas erstellen, das mehr glitcht und für den Betrachter interessanter wirkt. Darum habe ich mir zum Ziel gesetzt, einen im Hintergrund liegenden Strich zu generieren, der den Glitch-Effekt zusätzlich unterstützt.
+Auf der Suche nach dem passenden Icon bin ich erneut auf der Seite https://ionicons.com/ gelandet. Dieses mal entschied ich mich für einen Geist, da ich finde, dass dieses Icon gut zu dem Glitch-Thema insgesamt passt. Zu Beginn sah alles noch sehr langweilig aus, da der Effekt noch nicht genügend wie ein Glitch aussah. Aus diesem Grund versucht ich mit Hilfe des Internets einen Effekt zu erzeugen, der dies spannender macht und gleichzeitig meine eigenen Vorstellungen erfüllen würde.
