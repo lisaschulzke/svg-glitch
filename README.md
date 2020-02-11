@@ -31,6 +31,8 @@ Für den Geist nutzte ich wieder ein separates `SVG`tag. Ich bin der Meinung, da
 
 Mit dem tag `linearGradient` erzeugte ich den Farbverlauf in dem Geist und färbte ihn in den Farben meiner Wahl. Mit `feFlood` generierte ich den klassischen Glitch-Effekt mit dem rot-grünen Rand. Darum wählte ich die Farben schwarz, grün und rot.
 
+Um den Balken auf verschiedene Höhen zu setzen, kontrollierte ich die Höhe bzw. Position mit dem Attribut `values`, die dazugehörigen Zeiten, sodass sich das Ganze auch in einem schnelleren Tempo bewegt, definierte ich über das Attribut `keyTimes` und mithilfe von `repeatCount="indefinite` hört die Animation erstmal nicht auf.
+
 
 
 
